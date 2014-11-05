@@ -39,6 +39,27 @@ public:
   }
 };
 
+class MoveCommand: public Command {
+public:
+  MoveCommand(float x, float y) :
+    prevX_(0),
+    prevY_(0),
+    x_(x),
+    y_(y) {}
+
+  virtual void execute(Actor& actor) {
+    prevX_ = actor.x();
+    prevY_ = actor.y();
+    actor.moveTo(x_, y_);
+  }
+
+private:
+  float prevX_;
+  float prevY_;
+    float x_;
+    float y_;
+};
+
 
 #endif
 

@@ -4,6 +4,7 @@
 #include <iostream>
 
 class Actor {
+
 public:
   Actor();
 
@@ -11,6 +12,14 @@ public:
   void shoot();
   void attack();
   void reload();
+  void moveTo(float x, float y);
+
+  float x();
+  float y();
+
+private:
+  float x_;
+  float y_;
 };
 
 #endif

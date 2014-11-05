@@ -1,7 +1,7 @@
 #include "inputhandler.h"
 
 InputHandler::InputHandler() {
-  buttonA_ = new JumpCommand();
+  buttonA_ = new MoveCommand(10, 10); // JumpCommand();
   buttonB_ = new ShootCommand();
   buttonX_ = new AttackCommand();
   buttonY_ = new ReloadCommand();
