@@ -1,0 +1,6 @@
+.DS_Store
+*.h.gch
+**/bin/**
+
+.out
+.exe
