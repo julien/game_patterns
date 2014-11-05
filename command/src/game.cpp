@@ -11,6 +11,14 @@ Game::~Game() {
 void Game::start() {
   std::cout << "Starting game" << std::endl;
 
-  inputHandler.handleInput(BUTTON_A);
+  // 1st iteration
+  // inputHandler_.handleInput(BUTTON_A);
+
+  // 2nd iteration
+  Command * command = inputHandler_.handleInput(BUTTON_A);
+  if (command) {
+    std::cout << "Found a command" << std::endl;
+    command->execute(actor_);
+  }
 }
 

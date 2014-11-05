@@ -13,7 +13,10 @@ class InputHandler {
 public:
   InputHandler();
   ~InputHandler();
-  void handleInput(int button);
+
+  // void handleInput(int button);
+  Command * handleInput(int button);
+
   void press(int button);
   bool isPressed(int button);
 

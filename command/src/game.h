@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "inputhandler.h"
+#include "actor.h"
 
 class Game {
 
@@ -12,7 +13,8 @@ public:
   void start();
 
 private:
-  InputHandler inputHandler;
+  Actor actor_;
+  InputHandler inputHandler_;
 };
 
 #endif
